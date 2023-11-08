@@ -28,12 +28,12 @@ public class Cal_Briones extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        txtDisplay = new javax.swing.JTextField();
         jbtnClearEntry = new javax.swing.JButton();
         jbtnClearAll = new javax.swing.JButton();
-        jbtnModulo = new javax.swing.JButton();
+        jbtnPercent = new javax.swing.JButton();
         jbtnDivide = new javax.swing.JButton();
         jbtnMultiply = new javax.swing.JButton();
         jbtn3 = new javax.swing.JButton();
@@ -51,6 +51,9 @@ public class Cal_Briones extends javax.swing.JFrame {
         jbtn8 = new javax.swing.JButton();
         jbtn9 = new javax.swing.JButton();
         jbtnMinus1 = new javax.swing.JButton();
+        jLblDisplay = new javax.swing.JLabel();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,14 +72,6 @@ public class Cal_Briones extends javax.swing.JFrame {
             .addGap(0, 35, Short.MAX_VALUE)
         );
 
-        txtDisplay.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        txtDisplay.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        txtDisplay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDisplayActionPerformed(evt);
-            }
-        });
-
         jbtnClearEntry.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         jbtnClearEntry.setText("CE");
         jbtnClearEntry.addActionListener(new java.awt.event.ActionListener() {
@@ -93,11 +88,11 @@ public class Cal_Briones extends javax.swing.JFrame {
             }
         });
 
-        jbtnModulo.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jbtnModulo.setText("%");
-        jbtnModulo.addActionListener(new java.awt.event.ActionListener() {
+        jbtnPercent.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
+        jbtnPercent.setText("%");
+        jbtnPercent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnModuloActionPerformed(evt);
+                jbtnPercentActionPerformed(evt);
             }
         });
 
@@ -237,6 +232,10 @@ public class Cal_Briones extends javax.swing.JFrame {
             }
         });
 
+        jLblDisplay.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLblDisplay.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLblDisplay.setOpaque(true);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -245,40 +244,38 @@ public class Cal_Briones extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtDisplay)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jbtnClearEntry, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtnClearAll, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtnModulo, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtnDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtnMultiply, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jbtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtnMinus1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jbtnPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtn0, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtnDecimal, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jbtnEqual, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbtnClearEntry, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnClearAll, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnPercent, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnMultiply, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnMinus1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbtnPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtn0, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnDecimal, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbtnEqual, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jbtn7, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -288,18 +285,22 @@ public class Cal_Briones extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbtnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(14, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLblDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24)
-                .addComponent(txtDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLblDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbtnClearEntry, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbtnClearAll, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbtnModulo, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbtnPercent, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbtnDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -346,144 +347,136 @@ public class Cal_Briones extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDisplayActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDisplayActionPerformed
-
     private void jbtnClearEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnClearEntryActionPerformed
         String backspace = null;
 
-        if(txtDisplay.getText().length() > 0) {
+        if(jLblDisplay.getText().length() > 0) {
 
-           StringBuilder strB = new StringBuilder (txtDisplay.getText());
+           StringBuilder strB = new StringBuilder (jLblDisplay.getText());
 
-           strB.deleteCharAt (txtDisplay.getText().length() - 1);
+           strB.deleteCharAt (jLblDisplay.getText().length() - 1);
 
            backspace = strB.toString();
 
-           txtDisplay.setText (backspace);
+           jLblDisplay.setText (backspace);
          }
     }//GEN-LAST:event_jbtnClearEntryActionPerformed
 
     private void jbtnClearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnClearAllActionPerformed
-        txtDisplay.setText("");
+        jLblDisplay.setText("");
     }//GEN-LAST:event_jbtnClearAllActionPerformed
 
-    private void jbtnModuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnModuloActionPerformed
-        firstnum = Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText("");
-        operations = "%";
-    }//GEN-LAST:event_jbtnModuloActionPerformed
+    private void jbtnPercentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPercentActionPerformed
+        double currentNumber = Double.parseDouble(jLblDisplay.getText());
+        double percentValue = currentNumber / 100.0;
+        jLblDisplay.setText(String.valueOf(percentValue));
+    }//GEN-LAST:event_jbtnPercentActionPerformed
 
     private void jbtnDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDivideActionPerformed
-        firstnum = Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText("");
+        firstnum = Double.parseDouble(jLblDisplay.getText());
+        jLblDisplay.setText("");
         operations = "/";
     }//GEN-LAST:event_jbtnDivideActionPerformed
 
     private void jbtnMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMultiplyActionPerformed
-        firstnum = Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText("");
+        firstnum = Double.parseDouble(jLblDisplay.getText());
+        jLblDisplay.setText("");
         operations = "*";
     }//GEN-LAST:event_jbtnMultiplyActionPerformed
 
     private void jbtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn3ActionPerformed
-        String number = txtDisplay.getText() + jbtn3.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn3.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn3ActionPerformed
 
     private void jbtn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn2ActionPerformed
-        String number = txtDisplay.getText() + jbtn2.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn2.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn2ActionPerformed
 
     private void jbtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn1ActionPerformed
-    String number = txtDisplay.getText() + jbtn1.getText();
-    txtDisplay.setText(number);
+    String number = jLblDisplay.getText() + jbtn1.getText();
+    jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn1ActionPerformed
 
     private void jbtn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn5ActionPerformed
-        String number = txtDisplay.getText() + jbtn5.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn5.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn5ActionPerformed
 
     private void jbtn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn6ActionPerformed
-        String number = txtDisplay.getText() + jbtn6.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn6.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn6ActionPerformed
 
     private void jbtn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn4ActionPerformed
-        String number = txtDisplay.getText() + jbtn4.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn4.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn4ActionPerformed
 
     private void jbtnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnAddActionPerformed
-        firstnum = Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText("");
+        firstnum = Double.parseDouble(jLblDisplay.getText());
+        jLblDisplay.setText("");
         operations = "+";
     }//GEN-LAST:event_jbtnAddActionPerformed
 
     private void jbtn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn0ActionPerformed
-        String number = txtDisplay.getText() + jbtn0.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn0.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn0ActionPerformed
 
     private void jbtnPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnPlusMinusActionPerformed
-        double ops = Double.parseDouble(String.valueOf(txtDisplay.getText()));
+        double ops = Double.parseDouble(String.valueOf(jLblDisplay.getText()));
         ops = ops * (-1);
-        txtDisplay.setText(String.valueOf(ops));
+        jLblDisplay.setText(String.valueOf(ops));
     }//GEN-LAST:event_jbtnPlusMinusActionPerformed
 
     private void jbtnDecimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnDecimalActionPerformed
-        String number = txtDisplay.getText() + jbtnDecimal.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtnDecimal.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtnDecimalActionPerformed
 
     private void jbtnEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEqualActionPerformed
         String answer;
         
-        secondnum = Double.parseDouble(txtDisplay.getText());
+        secondnum = Double.parseDouble(jLblDisplay.getText());
         if(operations == "+"){
             result = firstnum + secondnum;
-            answer = String.format("%.0f",result);
-            txtDisplay.setText(answer);
+            answer = String.format("%.2f",result);
+            jLblDisplay.setText(answer);
         }else if(operations == "-"){
             result = firstnum - secondnum;
-            answer = String.format("%.0f",result);
-            txtDisplay.setText(answer);
+            answer = String.format("%.2f",result);
+            jLblDisplay.setText(answer);
         }else if(operations == "/"){
             result = firstnum / secondnum;
-            answer = String.format("%.0f",result);
-            txtDisplay.setText(answer);
+            answer = String.format("%.2f",result);
+            jLblDisplay.setText(answer);
         }else if(operations == "*"){
             result = firstnum * secondnum;
-            answer = String.format("%.0f",result);
-            txtDisplay.setText(answer);
-        }else if(operations == "%"){
-            result = firstnum % secondnum;
-            answer = String.format("%.0f",result);
-            txtDisplay.setText(answer);
+            answer = String.format("%.2f",result);
+            jLblDisplay.setText(answer);
         }
     }//GEN-LAST:event_jbtnEqualActionPerformed
 
     private void jbtn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn7ActionPerformed
-        String number = txtDisplay.getText() + jbtn7.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn7.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn7ActionPerformed
 
     private void jbtn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn8ActionPerformed
-        String number = txtDisplay.getText() + jbtn8.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn8.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn8ActionPerformed
 
     private void jbtn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn9ActionPerformed
-        String number = txtDisplay.getText() + jbtn9.getText();
-        txtDisplay.setText(number);
+        String number = jLblDisplay.getText() + jbtn9.getText();
+        jLblDisplay.setText(number);
     }//GEN-LAST:event_jbtn9ActionPerformed
 
     private void jbtnMinus1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnMinus1ActionPerformed
-        firstnum = Double.parseDouble(txtDisplay.getText());
-        txtDisplay.setText("");
+        firstnum = Double.parseDouble(jLblDisplay.getText());
+        jLblDisplay.setText("");
         operations = "-";
     }//GEN-LAST:event_jbtnMinus1ActionPerformed
 
@@ -523,6 +516,8 @@ public class Cal_Briones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLblDisplay;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton jbtn0;
@@ -542,9 +537,8 @@ public class Cal_Briones extends javax.swing.JFrame {
     private javax.swing.JButton jbtnDivide;
     private javax.swing.JButton jbtnEqual;
     private javax.swing.JButton jbtnMinus1;
-    private javax.swing.JButton jbtnModulo;
     private javax.swing.JButton jbtnMultiply;
+    private javax.swing.JButton jbtnPercent;
     private javax.swing.JButton jbtnPlusMinus;
-    private javax.swing.JTextField txtDisplay;
     // End of variables declaration//GEN-END:variables
 }
